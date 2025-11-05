@@ -40,7 +40,7 @@ export default function CCL() {
   const handleDriverType = (event) => setDriverInvolved(event.target.value);
 
   //* ===========================> SET REPORTED BY
-  const [reportedBy, setReportedBy] = useState("reportedByDP");
+  const [reportedBy, setReportedBy] = useState("reportedByDAWOCX");
   const handleReportedBy = (event) => setReportedBy(event.target.value);
 
   //* ===========================> SET CUSTOMER IMPACT
@@ -289,6 +289,20 @@ export default function CCL() {
             Reported By:
           </h2>
           <div className="w-full flex items-center justify-between">
+            <label
+              htmlFor="reportedByDAWOCX"
+              className="cursor-pointer flex items-center gap-2"
+            >
+              <input
+                type="radio"
+                name="reportedBy"
+                id="reportedByDAWOCX"
+                value="reportedByDAWOCX"
+                checked={reportedBy === "reportedByDAWOCX"}
+                onChange={handleReportedBy}
+              />
+              DA (if CX/CM is not known)
+            </label>
             <label
               htmlFor="reportedByDA"
               className="cursor-pointer flex items-center gap-2"
